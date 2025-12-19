@@ -14,14 +14,31 @@
         </select>
         <br><br>
 
-        <label>Ask your question:</label><br>
-        <input type="text" name="question" required>
+        <label>Select Scheme:</label><br>
+        <select onchange="fillQuestion(this.value)">
+            <option value="">-- Select a Scheme --</option>
+            <option value="pm awas yojana">PM Awas Yojana</option>
+            <option value="pm kisan">PM Kisan</option>
+            <option value="old age pension">Old Age Pension</option>
+        </select>
         <br><br>
 
-        <button type="submit">Ask</button>
+        <label>Or Type Your Question:</label><br>
+        <input type="text" id="question" name="question" placeholder="Type scheme name..." required>
+        <br><br>
+
+        <button type="submit">Search</button>
     </form>
 
     <h3>Response:</h3>
     <p>{{ response }}</p>
+
+    <script>
+        function fillQuestion(value) {
+            if (value !== "") {
+                document.getElementById("question").value = value;
+            }
+        }
+    </script>
 </body>
 </html>
