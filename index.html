@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Government Scheme Assistant</title>
+</head>
+<body>
+    <h2>Government Scheme Assistant</h2>
+
+    <form method="POST">
+        <label>Choose Language:</label>
+        <select name="language">
+            <option>English</option>
+            <option>Telugu</option>
+        </select>
+        <br><br>
+
+        <label>Ask your question:</label><br>
+        <input type="text" name="question" required>
+        <br><br>
+
+        <button type="submit">Ask</button>
+    </form>
+
+    <h3>Response:</h3>
+    <p>{{ response }}</p>
+</body>
+</html>
